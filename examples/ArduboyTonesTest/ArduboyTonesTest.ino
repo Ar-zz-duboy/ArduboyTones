@@ -1,9 +1,9 @@
 // Sketch for testing the ArduboyTones library
 
-#include <Arduboy2.h>
+#include <Arduboy.h>
 #include <ArduboyTones.h>
 
-Arduboy2 arduboy;
+Arduboy arduboy;
 ArduboyTones sound(arduboy.audio.enabled);
 
 #define BUTTON_DELAY 200
