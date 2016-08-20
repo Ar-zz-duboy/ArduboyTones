@@ -17,7 +17,7 @@ ArduboyTones has equivalents to Arduino *tone()* and [*noTone()*](https://www.ar
 - Each tone can specify that it's to be played at either normal or a higher volume. High volume is accomplished by taking advantage of the speaker being wired across two pins and toggling each pin opposite to the other, which will generate twice the normal voltage across the speaker. For normal volume, one pin is toggled while the other is held low.
 - A function is available to set flags to ignore the individual volume setting in each tone, so that all tones will play at either normal or high volume.
 - Tone sequences can include intervals of silence (musical rests).
-- Includes a global *mute* capability by using a callback function, specified by the sketch, which indicates sound is to be muted. When muted, the sketch can continue to call functions to produce tones in the usual way but the speaker will remain silent. It is intended that the Arduboy2 Library's *audio.enabled()* function, or something similar, be used as this function.
+- Includes a global *mute* capability by using a callback function, specified by the sketch, which indicates sound is to be muted. When muted, the sketch can continue to call functions to produce tones in the usual way but the speaker will remain silent. It is intended that the Arduboy Library's *audio.enabled()* function, or something similar, be used as this function.
 - A function is provided which will return *true* if tones are playing or *false* if the sequence has completed.
 
 Note that even with all these features, ArduboyTones will use significantly less code space than using Arduino *tone()* functions.
@@ -44,15 +44,15 @@ Include the library using
 
 `#include <ArduboyTones.h>`
 
-You must then create an *ArduboyTones* object which specifies the callback function used for muting. The function is a required parameter. It must return a *boolean* (or *bool*) value which will be *true* if sound should be played, or *false* if all sounds should be muted. In this document the *ArduboyTones* object will be named *sound*. The *audio.enabled()* function of the *Arduboy2* library will be used for the mute callback. The *Arduboy2* object will be named *arduboy*.
+You must then create an *ArduboyTones* object which specifies the callback function used for muting. The function is a required parameter. It must return a *boolean* (or *bool*) value which will be *true* if sound should be played, or *false* if all sounds should be muted. In this document the *ArduboyTones* object will be named *sound*. The *audio.enabled()* function of the *Arduboy* library will be used for the mute callback. The *Arduboy* object will be named *arduboy*.
 
 So, to set things up we can use:
 
 ```cpp
-#include <Arduboy2.h>
+#include <Arduboy.h>
 #include <ArduboyTones.h>
 
-Arduboy2 arduboy;
+Arduboy arduboy;
 ArduboyTones sound(arduboy.audio.enabled);
 ```
 
@@ -183,7 +183,7 @@ Returns *true* if playing (even if sound is muted).
 
 #### Example sketch
 
-The ArduboyTones library contains an example sketch *ArduboyTonesTest* in the *examples* folder. It was primarily written to test the library but the code can be examined and uploaded for examples of using all the functions. It's uses the [*Arduboy2*](https://github.com/MLXXXp/Arduboy2) library, which must be installed to compile the sketch. It can be loaded into the Arduino IDE using the menus:
+The ArduboyTones library contains an example sketch *ArduboyTonesTest* in the *examples* folder. It was primarily written to test the library but the code can be examined and uploaded for examples of using all the functions. It's uses the [*Arduboy*](https://github.com/Arduboy/Arduboy) library, which must be installed to compile the sketch. *ArduboyTonesTest* can be loaded into the Arduino IDE using the menus:
 
 `File > Examples > ArduboyTones > ArduboyTonesTest`
 
