@@ -183,7 +183,7 @@ Returns *true* if playing (even if sound is muted).
 
 #### Example sketch
 
-The ArduboyTones library contains an example sketch *ArduboyTonesTest* in the *examples* folder. It was primarily written to test the library but the code can be examined and uploaded for examples of using all the functions. It's uses the [*Arduboy*](https://github.com/Arduboy/Arduboy) library, which must be installed to compile the sketch. *ArduboyTonesTest* can be loaded into the Arduino IDE using the menus:
+The ArduboyTones library contains an example sketch *ArduboyTonesTest* in the *examples* folder. It was primarily written to test the library but the code can be examined and uploaded for examples of using all the functions. It uses the [*Arduboy*](https://github.com/Arduboy/Arduboy) library, which must be installed to compile the sketch. *ArduboyTonesTest* can be loaded into the Arduino IDE using the menus:
 
 `File > Examples > ArduboyTones > ArduboyTonesTest`
 
