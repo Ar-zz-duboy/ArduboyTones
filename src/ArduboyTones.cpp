@@ -1,7 +1,13 @@
+/**
+ * @file ArduboyTones.cpp
+ * \brief An Arduino library for playing tones and tone sequences, 
+ * intended for the Arduboy game system.
+ */
+
 /*****************************************************************************
   ArduboyTones
 
-An Arduino library to play tone sequences.
+An Arduino library to play tones and tone sequences.
 
 Specifically written for use by the Arduboy miniature game system
 https://www.arduboy.com/
